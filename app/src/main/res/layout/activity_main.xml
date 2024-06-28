@@ -10,8 +10,8 @@
 <Button
     android:layout_width="match_parent"
     android:layout_height="300dp"
-    android:id="@+id/f1"
+    android:id="@+id/jumpToList"
     android:background="@color/black"
-    android:text="wu"/>
+    android:text="跳转到列表页"/>
 
 </LinearLayout>

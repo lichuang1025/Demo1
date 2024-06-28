@@ -1,24 +1,36 @@
 package com.example.tiaozhuan;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.KeyEvent;
+import android.view.View;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
-public class MainActivity2 extends AppCompatActivity {
+import java.util.ArrayList;
+import java.util.List;
 
+public class ListActivity extends AppCompatActivity {
+
+    private RecyclerView recyclerView;
+    private StringAdapter adapter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_main2);
+        setContentView(R.layout.list_activity);
         Log.d("lichuang2", "onStart");
+        recyclerView = findViewById(R.id.recyclerview);
+        ArrayList<String> arrayList = new ArrayList<>();
+        for (int i = 0; i < 50; i++) {
+            arrayList.add("标题"+i);
+        }
+        recyclerView.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false));
+        adapter = new StringAdapter(arrayList);
+        recyclerView.setAdapter(adapter);
     }
 
     @Override

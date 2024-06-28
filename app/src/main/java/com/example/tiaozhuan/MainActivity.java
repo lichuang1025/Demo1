@@ -1,7 +1,9 @@
 package com.example.tiaozhuan;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -17,7 +19,12 @@ public class MainActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
         Log.d("lichuang1","onCreate");
-
+        findViewById(R.id.jumpToList).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this,ListActivity.class));
+            }
+        });
     }
 
     @Override
@@ -55,4 +62,5 @@ public class MainActivity extends AppCompatActivity {
         super.onRestart();
         Log.d("lichuang1","onRestart");
     }
+
 }
