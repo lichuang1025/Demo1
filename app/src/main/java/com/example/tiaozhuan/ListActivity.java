@@ -26,7 +26,7 @@ public class ListActivity extends AppCompatActivity {
         recyclerView = findViewById(R.id.recyclerview);
         ArrayList<String> arrayList = new ArrayList<>();
         for (int i = 0; i < 50; i++) {
-            arrayList.add("标题"+i);
+            arrayList.add("他将是全球史上最有钱的囚犯"+i);
         }
         recyclerView.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false));
         adapter = new StringAdapter(arrayList);
@@ -72,14 +72,14 @@ public class ListActivity extends AppCompatActivity {
     }
 
 
-    @Override
-    public boolean dispatchKeyEvent(KeyEvent event) {
-        return false;
-    }
-
-    @Override
-    public boolean onKeyDown(int keyCode, KeyEvent event) {
-        return false;
-    }
+//    @Override
+//    public boolean dispatchKeyEvent(KeyEvent event) {
+//        return false;
+//    }
+//
+//    @Override
+//    public boolean onKeyDown(int keyCode, KeyEvent event) {
+//        return false;
+//    }
 
 }
