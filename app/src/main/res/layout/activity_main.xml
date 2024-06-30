@@ -9,9 +9,17 @@
     android:orientation="vertical">
 <Button
     android:layout_width="match_parent"
-    android:layout_height="300dp"
+    android:layout_height="100dp"
     android:id="@+id/jumpToList"
     android:background="@color/black"
     android:text="跳转到列表页"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:id="@+id/jumpToViewPage"
+        android:background="@color/black"
+        android:text="跳转到ViewPage页"
+        android:layout_marginTop="16dp"/>
 
 </LinearLayout>

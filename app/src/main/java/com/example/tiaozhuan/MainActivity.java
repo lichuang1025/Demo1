@@ -25,7 +25,16 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(MainActivity.this,ListActivity.class));
             }
         });
+        findViewById(R.id.jumpToViewPage).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this,ViewPagerActivity.class));
+            }
+        });
     }
+
+
+
 
     @Override
     protected void onStart() {
